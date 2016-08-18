@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+  cloud:
+    config:
+      server:
+        health:
+          repositories:
+            app1:
+              name: configCenterServer
+              profiles: dev
+            app2:
+              name: marketNews
+              profiles: dev
+        git:
+          uri: https://github.com/wuxiaoxin730/SpringCloudConfigServer
+  application:
+    name: configCenterServer
+server:
+  port: 8000
