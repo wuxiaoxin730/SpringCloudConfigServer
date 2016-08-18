@@ -15,7 +15,8 @@ spring:
         git:
           uri: https://github.com/wuxiaoxin730/SpringCloudConfigServer
           search-paths:
-            - ConfigService/src/main/resources
+            - ConfigService
+            - '*/resources'
   application:
     name: configCenterServer
 server:
